@@ -6,5 +6,5 @@ services="minidlna apache2 samba mysql nmbd smbd"
 rm -f /share/scripts/status.log
 for serv in $services
 do
-   service $serv status >> /share/scripts/status.log
+   sudo service $serv status >> /share/scripts/status.log
 done
