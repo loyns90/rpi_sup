@@ -53,16 +53,6 @@
             "port": 80
         },
         {
-            "name": "Email Server (incoming)",
-            "host": "localhost",
-            "port": 993
-        },
-        {
-            "name": "Email Server (outgoing)",
-            "host": "localhost",
-            "port": 587
-        },
-        {
             "name": "FTP Server",
             "host": "localhost",
             "port": 21

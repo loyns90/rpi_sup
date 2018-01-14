@@ -43,7 +43,23 @@ $update = $Config->checkUpdate();
 
 <div id="main-container">
 
-    <div class="box column-left" id="esm-system">
+
+        <div class="box column-left" id="esm-services">
+            <div class="box-header">
+                <h1>Services status</h1>
+                <ul>
+                    <li><a href="#" class="reload" onclick="esm.reloadBlock('services');"><span class="icon-cycle"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="box-content">
+                <table>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+    <div class="box column-right" id="esm-system">
         <div class="box-header">
             <h1>System</h1>
             <ul>
@@ -54,10 +70,6 @@ $update = $Config->checkUpdate();
         <div class="box-content">
             <table class="firstBold">
                 <tbody>
-                    <tr>
-                        <td>Hostname</td>
-                        <td id="system-hostname"></td>
-                    </tr>
                     <tr>
                         <td>OS</td>
                         <td id="system-os"></td>
@@ -73,14 +85,6 @@ $update = $Config->checkUpdate();
                     <tr>
                         <td>Last boot</td>
                         <td id="system-last_boot"></td>
-                    </tr>
-                    <tr>
-                        <td>Current user(s)</td>
-                        <td id="system-current_users"></td>
-                    </tr>
-                    <tr>
-                        <td>Server date & time</td>
-                        <td id="system-server_date"></td>
                     </tr>
                 </tbody>
             </table>
@@ -113,73 +117,7 @@ $update = $Config->checkUpdate();
         </div>
     </div>
 
-
-
-    <div class="box column-right" id="esm-cpu">
-        <div class="box-header">
-            <h1>CPU</h1>
-            <ul>
-                <li><a href="#" class="reload" onclick="esm.reloadBlock('cpu');"><span class="icon-cycle"></span></a></li>
-            </ul>
-        </div>
-
-        <div class="box-content">
-            <table class="firstBold">
-                <tbody>
-                    <tr>
-                        <td>Model</td>
-                        <td id="cpu-model"></td>
-                    </tr>
-                    <tr>
-                        <td>Cores</td>
-                        <td id="cpu-num_cores"></td>
-                    </tr>
-                    <tr>
-                        <td>Speed</td>
-                        <td id="cpu-frequency"></td>
-                    </tr>
-                    <tr>
-                        <td>Cache</td>
-                        <td id="cpu-cache"></td>
-                    </tr>
-                    <tr>
-                        <td>Bogomips</td>
-                        <td id="cpu-bogomips"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
-
-    <div class="box column-left" id="esm-network">
-        <div class="box-header">
-            <h1>Network usage</h1>
-            <ul>
-                <li><a href="#" class="reload" onclick="esm.reloadBlock('network');"><span class="icon-cycle"></span></a></li>
-            </ul>
-        </div>
-
-        <div class="box-content">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="w15p">Interface</th>
-                        <th class="w20p">IP</th>
-                        <th>Receive</th>
-                        <th>Transmit</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
-
-
     <div class="cls"></div>
-
-
 
     <div class="box" id="esm-disk">
         <div class="box-header">
@@ -206,9 +144,6 @@ $update = $Config->checkUpdate();
             </table>
         </div>
     </div>
-
-
-
 
     <div class="box column-left" id="esm-memory">
         <div class="box-header">
@@ -274,70 +209,13 @@ $update = $Config->checkUpdate();
         </div>
     </div>
 
-
-    <div class="cls"></div>
-
-
-    <div class="t-center">
-        <div class="box column-left column-33" id="esm-last_login">
-            <div class="box-header">
-                <h1>Last login</h1>
-                <ul>
-                    <li><a href="#" class="reload" onclick="esm.reloadBlock('last_login');"><span class="icon-cycle"></span></a></li>
-                </ul>
-            </div>
-
-            <div class="box-content">
-                <table>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-
-
-        <div class="box column-right column-33" id="esm-services">
-            <div class="box-header">
-                <h1>Services status</h1>
-                <ul>
-                    <li><a href="#" class="reload" onclick="esm.reloadBlock('services');"><span class="icon-cycle"></span></a></li>
-                </ul>
-            </div>
-
-            <div class="box-content">
-                <table>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-
-
-
-        <div class="box t-center" style="margin: 0 33%;" id="esm-ping">
-            <div class="box-header">
-                <h1>Ping</h1>
-                <ul>
-                    <li><a href="#" class="reload" onclick="esm.reloadBlock('ping');"><span class="icon-cycle"></span></a></li>
-                </ul>
-            </div>
-
-            <div class="box-content">
-                <table>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-    </div>
-
-    
-
     <div class="cls"></div>
 
 </div>
 
-<a href="https://ezservermonitor.com/esm-web/documentation">Documentation Access</a>
+<div align="center">
+    <a href="https://ezservermonitor.com/esm-web/documentation" target="_blank">Documentation Access</a>
+</div>
 
 </body>
 </html>
