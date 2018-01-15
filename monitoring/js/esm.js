@@ -230,8 +230,27 @@ esm.getServices = function() {
 
 }
 
+esm.getShortcuts = function() {
 
+    $.get('libs/shortcuts.php', function(data) {
 
+        var $box = $('.box#esm-shortcuts .box-content tbody');
+        $box.empty();
+
+        for (var line in data)
+        {
+
+            var html = '';
+            html += '<tr>';
+            html += '<td><a href="'+data[line].url+'" target="'+data[line].target+'">'+data[line].name+'</a></td>';
+            html += '</tr>';
+
+            $box.append(html);
+        }
+
+    }, 'json');
+
+}
 
 esm.getAll = function() {
     esm.getSystem();
@@ -244,6 +263,7 @@ esm.getAll = function() {
     esm.getNetwork();
     esm.getPing();
     esm.getServices();
+    esm.getShortcuts();
 }
 
 esm.reloadBlock = function(block) {
@@ -294,5 +314,6 @@ esm.mapping = {
     last_login: esm.getLast_login,
     network: esm.getNetwork,
     ping: esm.getPing,
-    services: esm.getServices
+    services: esm.getServices,
+    shortcuts: esm.getShortcuts
 };

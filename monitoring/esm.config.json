@@ -8,6 +8,13 @@
     "disk": {
         "show_tmpfs": true
     },
+    "shortcuts": [
+        {
+            "name": "Transmission",
+            "url": "http://88.169.146.188:9091",
+            "target": "_blank"
+        }
+    ],
     "ping": {
         "hosts": [
             "google.com"
