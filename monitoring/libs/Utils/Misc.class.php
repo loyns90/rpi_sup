@@ -99,4 +99,24 @@ class Misc
     {
         return $nb > 1 ? $plural : $singular;
     }
+
+    /**
+     * Get true IP addresse
+     */
+    public static function getIp() {
+    	// IP if shared internet
+    	if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+    		return $_SERVER['HTTP_CLIENT_IP'];
+    	}
+    	// IP behind a proxy
+    	elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    		return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    	}
+    	// Normal IP
+    	else {
+    		return (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '');
+    	}
+      //return $_SERVER['HTTP_CLIENT_IP'];
+    }
+
 }

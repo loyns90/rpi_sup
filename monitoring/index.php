@@ -54,6 +54,20 @@
                     </table>
                 </div>
 	    </div>
+	    <div class="box" id="esm-client">
+                <div class="box-header">
+                    <h1>Client <?php echo(Misc::getIp()) ?></h1>
+                    <ul>
+                       <li><a href="#" class="reload" onclick="esm.reloadBlock('client');"><span class="icon-cycle"></span></a></li>
+                    </ul>
+                </div>
+                 <div class="box-content">
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
 	    <div class="box column-left" id="esm-services">
                 <div class="box-header">
                     <h1>Services status</h1>
