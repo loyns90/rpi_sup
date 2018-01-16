@@ -6,17 +6,17 @@
         "auto_refresh": 0
     },
     "disk": {
-        "show_tmpfs": true
+        "show_tmpfs": false
     },
     "shortcuts": [
         {
             "name": "Transmission",
-            "url": "http://88.169.146.188:9091",
+            "url": ":9091",
             "target": "_blank"
         },
         {
 	    "name": "MiniDLNA",
-            "url": "http://88.169.146.188:8200",
+            "url": ":8200",
             "target": "_blank"
         }
     ],
@@ -32,15 +32,11 @@
 	{
 	    "name": "MiniDLNA",
 	    "host": "localhost",
-	    "host-ext": "88.169.146.188",
-	    "target": "_blank",
 	    "port": 8200
 	},
 	{
 	    "name": "Transmission",
 	    "host": "localhost",
-            "host-ext": "88.169.146.188",
-            "target": "_blank",
 	    "port": 9091
 	},
 	{
@@ -66,8 +62,6 @@
 	{
             "name": "Web Server",
             "host": "localhost",
-            "host-ext": "88.169.146.188",
-            "target": "_blank",
             "port": 80
         },
         {

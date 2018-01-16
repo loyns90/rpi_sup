@@ -41,7 +41,7 @@
     </head>
     <body>
         <div id="main-container">
-            <div class="box" id="esm-shortcuts">
+            <!--<div class="box" id="esm-shortcuts">
 	    	<div class="box-header">
 		    <h1>Shortcuts</h1>
 		    <ul>
@@ -66,8 +66,7 @@
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
-
+            </div>-->
 	    <div class="box column-left" id="esm-services">
                 <div class="box-header">
                     <h1>Services status</h1>

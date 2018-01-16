@@ -240,7 +240,7 @@ esm.getServices = function() {
             var html = '';
             html += '<tr>';
             html += '<td class="w15p"><span class="label '+label_color+'">'+label_status+'</span></td>';
-            html += '<td>'+data[line].name+'</td>';
+            html += '<td><a href="http://'+location.hostname+':'+data[line].port+'" target="_blank">'+data[line].name+'</a></td>';
             html += '<td class="w15p">'+data[line].port+'</td>';
             html += '</tr>';
 
