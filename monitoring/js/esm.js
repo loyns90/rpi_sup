@@ -203,28 +203,6 @@ esm.getPing = function() {
 
 }
 
-esm.getClient = function() {
-
-    $.get('libs/client.php', function(data) {
-
-        var $box = $('.box#esm-client .box-content tbody');
-        $box.empty();
-
-        for (var line in data)
-        {
-            var html = '';
-            html += '<tr>';
-            html += '<td>'+data[line].ip+'</td>';
-            html += '</tr>';
-
-            $box.append(html);
-        }
-
-    }, 'json');
-
-}
-
-
 esm.getServices = function() {
 
     $.get('libs/services.php', function(data) {
@@ -308,7 +286,6 @@ esm.getAll = function() {
     esm.getPing();
     esm.getServices();
     esm.getShortcuts();
-    esm.getClient();
     esm.getDiskUsage();
 }
 
@@ -362,6 +339,5 @@ esm.mapping = {
     ping: esm.getPing,
     services: esm.getServices,
     shortcuts: esm.getShortcuts,
-    client: esm.getClient,
     diskusage: esm.getDiskUsage
 };

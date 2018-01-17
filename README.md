@@ -1,4 +1,4 @@
-Supervision des services presents sur le Raspberry Pi
+Supervision standalone
 
-add_crontab_line.sh >> À exécuter en administrateur pour l'ajout dans la crontab.
-check_services.sh >> À placer dans /share/scripts/
+Cette supervision utilise un "eZ Server Monitor Web" modifié.
+Pour l'utilisation de celui-ci un serveur web et un interpreteur php sont nécessaires.
