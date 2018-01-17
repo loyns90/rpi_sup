@@ -41,32 +41,19 @@
     </head>
     <body>
         <div id="main-container">
-            <!--<div class="box" id="esm-shortcuts">
-	    	<div class="box-header">
-		    <h1>Shortcuts</h1>
-		    <ul>
-                       <li><a href="#" class="reload" onclick="esm.reloadBlock('shortcuts');"><span class="icon-cycle"></span></a></li>
-                    </ul>
-		</div>
-		 <div class="box-content">
-                    <table>
-                        <tbody></tbody>
-                    </table>
-                </div>
-	    </div>
-	    <div class="box" id="esm-client">
+	    <div class="box" id="esm-diskusage">
                 <div class="box-header">
-                    <h1>Client <?php echo(Misc::getIp()) ?></h1>
+                    <h1>Disk Usage</h1>
                     <ul>
-                       <li><a href="#" class="reload" onclick="esm.reloadBlock('client');"><span class="icon-cycle"></span></a></li>
+                        <li><a href="#" class="reload" onclick="esm.reloadBlock('diskusage');"><span class="icon-cycle"></span></a></li>
                     </ul>
                 </div>
-                 <div class="box-content">
+                <div class="box-content">
                     <table>
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>-->
+            </div>
 	    <div class="box column-left" id="esm-services">
                 <div class="box-header">
                     <h1>Services status</h1>

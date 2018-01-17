@@ -273,6 +273,29 @@ esm.getShortcuts = function() {
 
 }
 
+esm.getDiskUsage = function() {
+
+    $.get('libs/disk_usage.php', function(data) {
+
+        var $box = $('.box#esm-diskusage .box-content tbody');
+        $box.empty();
+
+        for (var line in data)
+        {
+
+            var html = '';
+            html += '<tr>';
+            html += '<td>'+data[line].folder+'</td>';
+            html += '<td>'+data[line].usage+'</td>';
+            html += '</tr>';
+
+            $box.append(html);
+        }
+
+    }, 'json');
+
+}
+
 esm.getAll = function() {
     esm.getSystem();
     esm.getCpu();
@@ -286,6 +309,7 @@ esm.getAll = function() {
     esm.getServices();
     esm.getShortcuts();
     esm.getClient();
+    esm.getDiskUsage();
 }
 
 esm.reloadBlock = function(block) {
@@ -338,5 +362,6 @@ esm.mapping = {
     ping: esm.getPing,
     services: esm.getServices,
     shortcuts: esm.getShortcuts,
-    client: esm.getClient
+    client: esm.getClient,
+    diskusage: esm.getDiskUsage
 };
