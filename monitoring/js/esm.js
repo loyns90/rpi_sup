@@ -218,8 +218,9 @@ esm.getServices = function() {
             var html = '';
             html += '<tr>';
             html += '<td class="w15p"><span class="label '+label_color+'">'+label_status+'</span></td>';
-            html += '<td><a href="http://'+location.hostname+':'+data[line].port+'" target="_blank">'+data[line].name+'</a></td>';
+            html += '<td><a href="http://'+location.hostname+':'+data[line].port+data[line].url+'" target="_blank">'+data[line].name+'</a></td>';
             html += '<td class="w15p">'+data[line].port+'</td>';
+	    html += '<td class="w15p">Status service</td>';
             html += '</tr>';
 
             $box.append(html);

@@ -50,6 +50,14 @@
                 </div>
                 <div class="box-content">
                     <table>
+                        <thead>
+                            <tr>
+                                <th>HTTP Status</th>
+                                <th>Service</th>
+                                <th>Port</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -107,7 +115,7 @@
                 </div>
             </div>
             <div class="cls"></div>
-            <div class="box" id="esm-diskusage">
+            <div class="box column-left" id="esm-diskusage">
                 <div class="box-header">
                     <h1>Main Disk Usage</h1>
                     <ul>
@@ -116,11 +124,17 @@
                 </div>
                 <div class="box-content">
                     <table>
+			<thead>
+                            <tr>
+                                <th>Folder</th>
+                                <th>Used</th>
+                            </tr>
+                        </thead>
                         <tbody></tbody>
                     </table>
                 </div>
             </div>
-            <div class="box" id="esm-disk">
+            <div class="box column-right" id="esm-disk">
                 <div class="box-header">
                     <h1>Mounted Points Usage</h1>
                     <ul>
@@ -143,7 +157,7 @@
                     </table>
                 </div>
             </div>
-            <div class="box column-left" id="esm-memory">
+            <div class="box column-right" id="esm-memory">
                 <div class="box-header">
                     <h1>Memory</h1>
                     <ul>

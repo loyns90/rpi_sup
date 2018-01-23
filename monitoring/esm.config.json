@@ -32,51 +32,61 @@
 	{
 	    "name": "MiniDLNA",
 	    "host": "localhost",
+            "service": "minidlna",
 	    "port": 8200
 	},
 	{
 	    "name": "Transmission",
 	    "host": "localhost",
+            "service": "transmission",
 	    "port": 9091
 	},
 	{
 	    "name": "nbname (Samba)",
 	    "host": "localhost",
+            "service": "",
 	    "port": 137
 	},
 	{
 	    "name": "nbdatagram (Samba)",
 	    "host": "localhost",
+            "service": "",
 	    "port": 138
 	},
 	{
 	    "name": "nbsession (Samba)",
 	    "host": "localhost",
+            "service": "",
 	    "port": 139
 	},
 	{
 	    "name": "Windows shared folders Service",
 	    "host": "localhost",
+            "service": "",
 	    "port": 445
 	},
 	{
             "name": "Web Server",
             "host": "localhost",
+            "service": "apache2",
             "port": 80
         },
         {
             "name": "FTP Server",
             "host": "localhost",
+            "service": "",
             "port": 21
         },
         {
             "name": "Database Server",
             "host": "localhost",
+            "service": "mysql",
             "port": 3306
         },
         {
             "name": "SSH Service",
             "host": "localhost",
+            "service": "sshd",
             "port": 22
         }
     ]
