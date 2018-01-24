@@ -47,7 +47,6 @@ if (count($Config->get('services')) > 0)
 	$sport = shell_exec('sudo netstat -laputen | grep ":'.$service['port'].' " | awk \'{print $9}\'');
         list($serviceligne) = explode(PHP_EOL,$sport);
         list($pid,$servicename) = explode("/",$serviceligne);
-        echo $service['port'].' - '.$servicename.'<br>';
 	$nbfirst=1;
 	foreach ($all_services as $listed_service)
 	{
@@ -57,18 +56,9 @@ if (count($Config->get('services')) > 0)
 	        $ls_name = $end;
 	        $nbfirst=0;
 	    }
-	    if (strpos($ls_name, $servicename) !== false)
+	    if ((strpos($ls_name, $servicename) !== false) || (strpos($servicename, $ls_name) !== false))
 	    {
-		echo $ls_name;
-		$sstatus = shell_exec('sudo service '.$ls_name.' status');
-	    }
-	    else
-	    {
-		if (strpos($servicename, $ls_name) !== false)
-		{
-		    echo $servicename;
-                    $sstatus = shell_exec('sudo service '.$servicename.' status');
-		}
+		$sstatus = shell_exec('sudo service '.$ls_name.'* status');
 	    }
 	}
 
